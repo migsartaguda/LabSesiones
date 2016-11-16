@@ -41,6 +41,7 @@
 	$preguntas = mysqli_query($mysqli, "select * from preguntas" ) or die( mysql_error() );
 
 		echo '<table border=1> <tr> 
+		 <th> Id pregunta</th>
 		<th> Email </th>
 		<th> Pregunta </th>
 		<th> Respuesta </th>
@@ -49,12 +50,12 @@
 		
 		while( $row = mysqli_fetch_array($preguntas) ){
 			echo '<tr>
+                                          <td>'.$row['Id'].'</td>
 					  <td>'.$row['Email'].'</td>
 					  <td>'.$row['Pregunta'].'</td>
 					  <td>'.$row['Respuesta'].'</td>
 					  <td>'.$row['Dificultad'].'</td>
 				 </tr>';
-			
 		}
 		echo '</table>';
 		

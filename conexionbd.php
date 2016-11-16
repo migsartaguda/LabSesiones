@@ -1,20 +1,20 @@
 <?php
 
-        $HOSTINGER=0;
+        $HOSTINGER=1;
 	
 	if ($HOSTINGER==1)
-        {
+        {//En hostinger
 	$host = "mysql.hostinger.es";
-	$user = "u204349316_root";
-	$password = "gabriel3";
-	$dbname = "u204349316_users";
+	$user = "u102281824_migel";
+	$password = "miguel3";
+	$dbname = "u102281824_sw";
         }
         else
-        {
+        {//En local
         $host = "localhost";
-		$user = "root";
-		$password = "";
-		$dbname = "quiz";
+	$user = "root";
+	$password = "";
+	$dbname = "preguntas";
         }
 	
 	$mysqli = mysqli_connect($host, $user, $password, $dbname);
